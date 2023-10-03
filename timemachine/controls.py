@@ -761,10 +761,10 @@ class screen:
         self.width, self.height = width, height
         logger.debug(f" ---> disp {self.disp.width},{self.disp.height}")
         self.boldfont = ImageFont.truetype(
-            pkg_resources.resource_filename("timemachine.fonts", "DejaVuSansMono-Bold.ttf"), 33
+            pkg_resources.resource_filename("timemachine.fonts", "VT323-Regular.ttf"), 33
         )
         self.boldsmall = ImageFont.truetype(
-            pkg_resources.resource_filename("timemachine.fonts", "DejaVuSansMono-Bold.ttf"), 22
+            pkg_resources.resource_filename("timemachine.fonts", "VT323-Regular.ttf"), 22
         )
         self.font = ImageFont.truetype(pkg_resources.resource_filename("timemachine.fonts", "ariallgt.ttf"), 30)
         self.smallfont = ImageFont.truetype(pkg_resources.resource_filename("timemachine.fonts", "ariallgt.ttf"), 20)
