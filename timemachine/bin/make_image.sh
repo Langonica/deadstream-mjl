@@ -4,7 +4,8 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 version=v2
 image_date=`date +%Y%m%d`
 image_name=$version\_$image_date
-media_folder=/media/steve
+#changing path to dynamic when possible
+media_folder=/media/mike
 
 while [[ $# -gt 0 ]]
 do
@@ -51,7 +52,7 @@ system () {
 
 
 echo "Removing previous git folders"
-cd $media_folder/rootfs/home/deadhead
+cd $media_folder/rootfs/home/langonica
 current_env=$(basename `readlink -f timemachine`)
 files=`find . -maxdepth 1 -mindepth 1 -name env_\* -a -not -name $current_env -printf "%f "`
 sudo rm -rf $files
@@ -84,9 +85,9 @@ critical_command "sudo dd if=/dev/sdb of=$image_file bs=4M status=progress"
 sudo pishrink.sh $image_file
 echo "Replacing wpa_supplicant and knob_sense files"
 sudo mv $HOME/wpa_supplicant.conf $media_folder/rootfs/etc/wpa_supplicant/wpa_supplicant.conf
-sudo mv $HOME/.knob_sense $media_folder/rootfs/home/deadhead/.
-sudo mv $HOME/.timemachine_options.txt $media_folder/rootfs/home/deadhead/.
-sudo mv $HOME/timemachine_dot_ssh $media_folder/rootfs/home/deadhead/.ssh
+sudo mv $HOME/.knob_sense $media_folder/rootfs/home/langonica/.
+sudo mv $HOME/.timemachine_options.txt $media_folder/rootfs/home/langonica/.
+sudo mv $HOME/timemachine_dot_ssh $media_folder/rootfs/home/langonica/.ssh
 
 # NOTE: to burn an image use the command (or similar):
 # sudo sh -c "pv v2_20210625.img > /dev/sdb"
