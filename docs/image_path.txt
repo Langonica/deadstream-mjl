@@ -1,0 +1,15 @@
+bash make_image.sh
+image_file is /home/langonica/Dev/deadstream/timemachine/bin/v2_20231004.img, media_folder is /media/steve
+Removing previous git folders
+make_image.sh: line 54: cd: /media/steve/rootfs/home/deadhead: No such file or directory
+mv: cannot stat '.knob_sense': No such file or directory
+mv: cannot stat '.timemachine_options.txt': No such file or directory
+mv: cannot stat '.ssh': No such file or directory
+cp: cannot stat 'timemachine': No such file or directory
+cp: cannot stat '/home/langonica/test_sound.ogg': No such file or directory
+umount: /dev/sdb1: no mount point specified.
+umount: /dev/sdb2: no mount point specified.
+rm: cannot remove '/home/langonica/Dev/deadstream/timemachine/bin/v2_20231004.img': No such file or directory
+sudo dd if=/dev/sdb of=/home/langonica/Dev/deadstream/timemachine/bin/v2_20231004.img bs=4M status=progress
+dd: failed to open '/dev/sdb': No such file or directory
+Status 1
