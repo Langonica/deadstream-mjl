@@ -47,7 +47,8 @@ setup(
     package_data={
         "timemachine": [
             "fonts/ariallgt.ttf",
-            "fonts/DejaVuSansMono-Bold.ttf",
+            # "fonts/DejaVuSansMono-Bold.ttf",
+            "fonts/VT323-Regular.ttf",
             "fonts/FreeMono.ttf",
             "metadata/set_breaks.csv",
             "metadata/silence600.ogg",
